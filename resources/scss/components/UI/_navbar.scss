@@ -1,0 +1,44 @@
+@import "../../abstract";
+
+.nav {
+    @include flex-box(space-between, center, row);
+    padding: 12px 18px;
+    width: 100%;
+    background-color: $color-secondary;
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+
+    @include for-desktop-up {
+        padding: 16px 21px;
+    }
+
+    &__header > h1 {
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        font-family: $font-arimo;
+        color: white;
+
+        @include for-desktop-up {
+            font-size: 21px;
+        }
+    }
+
+    button {
+        @include flex-box(center, center, column);
+        border-radius: 9999px;
+        cursor: pointer;
+        overflow: auto;
+
+        img {
+            width: 42px;
+            height: 42px;
+            overflow: hidden;
+            background-position: center;
+            background-repeat: no-repeat;
+            object-fit: contain;
+            background-size: cover;
+        }
+    }
+}

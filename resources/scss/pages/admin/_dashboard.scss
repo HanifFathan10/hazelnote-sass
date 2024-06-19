@@ -1,0 +1,108 @@
+@import "../../abstract/";
+
+.body-dashboard {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 21px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__header {
+        gap: 12px;
+        background-color: white;
+        padding: 6px 8px;
+
+        @include flex-box(start, start, column);
+        @include border-radius(8px);
+
+        &__title {
+            font-size: 21px;
+            font-weight: 800;
+            font-family: $font-arimo;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            font-weight: 300;
+            font-family: $font-arimo;
+        }
+    }
+
+    &__body {
+        width: 100%;
+        gap: 21px;
+        @include flex-box(start, start, column);
+
+        &__wrapper {
+            width: 100%;
+            gap: 12px;
+
+            @include grid-column();
+        }
+
+        &__card {
+            padding: 16px 21px;
+            background-color: $color-secondary;
+            color: white;
+            background-color: #ffffff;
+            color: black;
+
+            @include flex-box(space-between, center, row);
+            @include border-radius(8px);
+
+            &__wrapper {
+                @include flex-box(start, start, column);
+
+                &__title {
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-family: $font-arimo;
+                    letter-spacing: 1px;
+                }
+
+                &__number {
+                    font-size: 24px;
+                    font-weight: 700;
+                    font-family: $font-arimo;
+                }
+
+                &__total {
+                    font-size: 14px;
+                    font-weight: 400;
+                    font-family: $font-arimo;
+                }
+            }
+        }
+    }
+
+    &__chart {
+        background-color: white;
+        @include border-radius(8px);
+
+        &__title {
+            font-size: 21px;
+            font-weight: 800;
+            font-family: $font-arimo;
+            padding: 10px 6px;
+        }
+
+        &__canvas {
+            width: 100% !important; /* Mengatur canvas agar lebar 100% */
+        }
+    }
+
+    &__table {
+        background-color: white;
+        margin-bottom: 50px;
+        padding: 6px 11px;
+        width: 100%;
+        @include border-radius(8px);
+
+        &__action {
+            gap: 12px;
+            @include flex-box(start, center, row);
+        }
+    }
+}

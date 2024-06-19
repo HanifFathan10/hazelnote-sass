@@ -1,0 +1,49 @@
+@import "../../abstract";
+
+.form {
+    @include flex-box(centers, center, column);
+    width: 100%;
+    margin-bottom: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 16px 18px;
+    gap: 16px;
+
+    &__input {
+        @include flex-box(center, start, column);
+        width: 100%;
+        gap: 4px;
+
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px 12px;
+            background-color: transparent;
+            border-radius: 8px;
+            color: white;
+        }
+
+        &__error {
+            color: $color-danger;
+            font-size: 12px;
+            padding: 3px 5px;
+        }
+    }
+
+    button {
+        width: 100%;
+        background-color: $color-accent;
+        border-radius: 8px;
+        color: white;
+        font-weight: 500;
+        padding: 6px;
+        border: none;
+        cursor: pointer;
+    }
+}

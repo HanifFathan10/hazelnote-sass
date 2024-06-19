@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+// SASS VARIABLE
+
+// FONTS
+$font-arimo: "Arimo", sans-serif;
+$font-open-sans: "Open Sans", sans-serif;
+
+// COLORS
+$color-primary: #0a0e15;
+$color-secondary: #212121;
+$color-accent: #2656f4;
+$color-white: #fff;
+$color-black: #000;
+$color-danger: #d60f0b; /* Material Orange 900 */
+$color-success: #468349; /* Material Green 800 */
+$color-warning: #cbaa05; /* Material Amber 800 */
+$color-info: #2196f3;
+
+$arrow-height: 9px;
+$arrow-width: 2px;
+$interactive-color: #4338ca;
+
+$color: (
+    "easy": $color-success,
+    "medium": $color-warning,
+    "hard": $color-danger,
+);
+
+@each $key, $value in $color {
+    .color-#{$key} {
+        background-color: $value;
+    }
+}

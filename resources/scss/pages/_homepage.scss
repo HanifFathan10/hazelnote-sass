@@ -1,0 +1,9 @@
+@import "../abstract";
+
+.home {
+    width: 100%;
+    height: 100vh;
+    @include flex-box(center, center, column);
+    gap: 12px;
+    background-color: $color-primary;
+}

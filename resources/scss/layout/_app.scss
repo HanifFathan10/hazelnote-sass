@@ -1,0 +1,12 @@
+@import "../abstract";
+
+.app {
+    width: 100%;
+    height: 100vh;
+
+    &__container {
+        @include flex-box(center, center, column);
+        background-color: $color-primary;
+        width: 100%;
+    }
+}

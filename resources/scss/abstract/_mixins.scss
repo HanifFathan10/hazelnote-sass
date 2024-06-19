@@ -1,0 +1,57 @@
+// MEDIA QUERIES
+
+@mixin for-phone-M {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
+@mixin for-phone-L {
+    @media (max-width: 425px) {
+        @content;
+    }
+}
+@mixin for-tablet-portrait-up {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+@mixin for-desktop-up {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+@mixin for-big-desktop-up {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}
+
+// ANOTHER MIXIN
+@mixin flex-box($justify: center, $align: start, $direction: column) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin grid-column($column: 3) {
+    display: grid;
+    grid-template-columns: repeat($column, minmax(0, 1fr));
+}
+
+@mixin border-radius($px: 8px) {
+    border-radius: $px;
+    -webkit-border-radius: $px;
+    -moz-border-radius: $px;
+    -ms-border-radius: $px;
+    -o-border-radius: $px;
+}
+
+@mixin transition(
+    $property: all,
+    $duration: 0.3s,
+    $timing-function: ease-in-out
+) {
+    transition: $property $duration $timing-function;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

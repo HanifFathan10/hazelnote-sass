@@ -1,0 +1,88 @@
+@import "../abstract";
+
+.sidebar {
+    width: 100%;
+    max-width: 280px;
+    height: 100%;
+    background-color: $color-secondary;
+    color: white;
+
+    @include flex-box(space-between, start, column);
+
+    &__header {
+        padding: 24px 0;
+        text-align: center;
+        width: 100%;
+        background-color: $color-secondary;
+        border-bottom: 1px solid rgba(27, 15, 15, 0.3);
+
+        & > h1 {
+            font-size: 21px;
+            font-weight: 600;
+            font-family: $font-arimo;
+        }
+    }
+
+    &__items {
+        width: 100%;
+        @include flex-box(space-between, start, column);
+        padding: 0 18px;
+        gap: 12px;
+
+        &__list {
+            width: 100%;
+            list-style: none;
+            padding: 12px 14px;
+            font-size: 16px;
+            font-family: $font-arimo;
+            background-color: $color-secondary;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.4px;
+            gap: 11px;
+
+            @include border-radius(6px);
+            @include flex-box(start, center, row);
+            @include transition();
+
+            &:hover {
+                background-color: #eaeaea;
+                color: $color-secondary;
+
+                svg path {
+                    stroke: $color-secondary; // Ganti dengan warna yang diinginkan saat hover
+                }
+            }
+
+            & > svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    &__form {
+        width: 100%;
+        height: auto;
+        padding: 12px 16px;
+
+        &__logout {
+            width: 100%;
+            padding: 12px 16px;
+            color: black;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: $font-arimo;
+
+            @include border-radius(6px);
+            @include transition();
+
+            &:hover {
+                background-color: $color-danger;
+                color: white;
+            }
+        }
+    }
+}

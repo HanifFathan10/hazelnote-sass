@@ -1,0 +1,17 @@
+@import "../../../abstract";
+
+.admin-header {
+    @include flex-box(space-between, center, row);
+    padding: 18px 22px;
+    width: 100%;
+    background-color: $color-secondary;
+    color: white;
+    border-bottom: 1px solid rgba(27, 15, 15, 0.3);
+    position: sticky;
+
+    &__title {
+        font-size: 28px;
+        font-weight: 600;
+        font-family: $font-arimo;
+    }
+}

@@ -1,0 +1,107 @@
+@import "../../abstract";
+
+.task {
+    @include flex-box(start, center, column);
+
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 24px;
+    gap: 32px;
+
+    @include for-desktop-up {
+        max-width: 1024px;
+    }
+
+    &__container {
+        width: 100%;
+        padding: 16px 18px;
+        background-color: rgba(0, 0, 0, 0.3);
+        @include border-radius(9999px);
+
+        &__header {
+            @include flex-box(space-between, center, row);
+            gap: 12px;
+
+            h1 {
+                font-size: 16px;
+                font-weight: 600;
+                font-family: $font-arimo;
+                color: white;
+
+                @include for-tablet-portrait-up {
+                    font-size: 21px;
+                }
+            }
+        }
+
+        &__create {
+            padding: 8px 12px;
+            background-color: $color-success;
+            @include border-radius(6px);
+
+            a {
+                color: white;
+                font-weight: 500;
+                font-size: 13px;
+            }
+        }
+    }
+
+    &__cards {
+        @include flex-box(center, center, column);
+        width: 100%;
+        gap: 12px;
+
+        &__card {
+            @include flex-box(space-between, center, row);
+            @include border-radius();
+
+            width: 100%;
+            padding: 16px 14px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+
+            @include for-tablet-portrait-up {
+                padding: 16px 24px;
+            }
+
+            &__name {
+                @include flex-box(center, start, column);
+                gap: 8px;
+                font-family: $font-arimo;
+                letter-spacing: 1px;
+
+                h1 {
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-family: $font-arimo;
+
+                    @include for-desktop-up {
+                        font-size: 18px;
+                    }
+                }
+
+                h3 {
+                    font-size: 14px;
+                    font-weight: 400;
+                    font-family: $font-arimo;
+                }
+            }
+
+            &__priority {
+                @include flex-box(center, center, column);
+                @include border-radius(9999px);
+
+                display: none;
+                padding: 9px 21px;
+                font-size: 13px;
+                font-weight: 500;
+                font-family: $font-arimo;
+
+                @include for-tablet-portrait-up {
+                    display: block;
+                }
+            }
+        }
+    }
+}
